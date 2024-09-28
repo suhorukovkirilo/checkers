@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="files/css/index.css" rel="stylesheet">
+    <link href="files/css/game.css" rel="stylesheet">
+    <title>Checkers</title>
+</head>
+<body>
+    <header>
+        <img class="icon" src="files/img/icon.png">
+        <h1>Checkers</h1>
+        <nav>
+            <a href="/">Створити гру</a>
+            <a href="/join">Приєднатися до гри</a>
+            <a href="/FAQ">FAQ</a>
+        </nav>
+    </header>
+    <div class="sub-header"></div>
+    <main>
+        <h2>Завантаження...</h2>
+        <div class="board">
+            <div class="row a">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row b">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row c">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row d">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row e">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row f">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row g">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row h">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="checkers">
+            </div>
+        </div>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const TOKEN = '{{ TOKEN }}';
+        const playerName = '{{ name }}';
+        const startBoard = JSON.parse('{{ board }}');
+        const playerColor = '{{ color }}';
+        let canMove = '{{ move }}';
+    </script>
+    <script src="files/js/game.js" defer></script>
+</body>
+</html>
