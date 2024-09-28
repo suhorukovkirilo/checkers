@@ -1,0 +1,80 @@
+main h2 {
+    text-align: center;
+    margin: 10px 0px !important;
+}
+
+main h2 span.green {
+    color: darkgreen;
+}
+
+main h2 span.error {
+    color: darkred;
+}
+
+.board {
+    --board: 560px;
+    width: var(--board);
+    height: var(--board);
+    margin: 20px auto;
+    position: relative;
+}
+
+.board .row {
+    display: flex;
+}
+
+.board .row div {
+    width: calc(var(--board) / 8);
+    height: calc(var(--board) / 8);
+    background-color: #f0d2b4;
+}
+
+.board .row:nth-child(2n) div {
+    background-color: #ba7a3a;
+}
+
+.board .row div:nth-child(2n) {
+    background-color: #ba7a3a;
+}
+
+.board .row:nth-child(2n) div:nth-child(2n) {
+    background-color: #f0d2b4;
+}
+
+.checkers div {
+    position: absolute;
+    width: calc(var(--board) / 10);
+    height: calc(var(--board) / 10);
+    left: calc(var(--x) * var(--board) / 8 + var(--board) / 16);
+    top: calc(var(--y) * var(--board) / 8 + var(--board) / 16);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.checkers .hint {
+    width: calc(var(--board) / 12);
+    height: calc(var(--board) / 12);
+    border: calc(var(--board) / 100) solid #9f9f9f;
+}
+
+.checkers div[color="white"] {
+    background-color: darkred;
+}
+
+.checkers div[color="black"] {
+    background-color: black;
+}
+
+@media (max-width: 800px) {
+    .board {
+        --board: 480px;
+    }
+}
+
+@media (max-width: 500px) {
+    .board {
+        --board: 80vw;
+    }
+}
