@@ -1,0 +1,37 @@
+body {
+    --board: 360px;
+}
+
+main h1 {
+    font-family: "Handlee";
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+    transform: perspective(75em) rotateX(18deg);
+}
+
+main .btn-set {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: var(--board);
+    margin: 0 auto;
+}
+  
+.board {
+    transition: 0.5s all;
+}
+
+.board:hover {
+    transform: translateY(-20px);
+    box-shadow: none;
+}
+
+.board .checkers div {
+    transition: 0.4s all;
+}
+
+.main-div:has(.wrap-loader) {
+    width: 50vw;
+    margin-left: 25vw;
+}

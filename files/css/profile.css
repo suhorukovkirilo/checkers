@@ -1,0 +1,16 @@
+.profile {
+    width: max(10vw, 175px);
+    margin-left: calc((100vw - max(10vw, 175px))/2);
+    margin-top: 15vh;
+}
+
+.profile * {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.profile img {
+    border-radius: 50%;
+}

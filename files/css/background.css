@@ -1,0 +1,44 @@
+.background {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+  
+.rainbox {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: 50%;
+    filter: blur(5px);
+}
+  
+.rainbox, .rain {
+    position: absolute;
+}
+  
+.rain {
+    filter: brightness(1.8);
+}
+  
+.drops {
+    background-color: var(--black);
+    background-size: 70vw 70vh;
+    background-position: 50%;
+    border-radius: 100%;
+    position: absolute;
+    transform: rotate(0deg) rotateY(0);
+    opacity: 0.05;
+}
+  
+@keyframes rainingAnim {
+    from {}
+    to {
+        transform: translateY(100vh);
+    }
+}
