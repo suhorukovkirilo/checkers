@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="files/css/index.css" rel="stylesheet">
+    <link href="files/css/game.css" rel="stylesheet">
+    <link href="files/css/profile.css" rel="stylesheet">
+    <title>Checkers</title>
+</head>
+<body>
+    {{ header }}
+    <main>
+        <div class="profile">
+            <div class="pic">
+                <img src="files/img/user.png" width="128" height="128">
+            </div>
+            <p>Username: <span class="us">@username</span></p>
+            <p>Name: <span class="fn">John</span> <span class="ln">Doe</span></p>
+            <p>Games: <span class="gm">0</span></p>
+            <p>Won: <span class="wn">0</span></p>
+            <p>Winrate: <span class="wr">0</span>%</p>
+            <div style="text-align: center;">
+                <button class="btn logout">Log out</button>
+            </div>
+        </div>
+    </main> 
+    {{ background }}
+    <script src="files/js/profile.js" defer></script>
+</body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="files/css/index.css" rel="stylesheet">
+    <title>Checkers</title>
+</head>
+<body>
+    {{ header }}
+    <main>
+        <form method="post">
+            <h2>Enter the code game:</h2>
+            <p id="message" style="color: var(--darkred); margin: 0px; text-align: center;"></p>
+            <input name="code" id="code" placeholder="game code" autocomplete="off">
+            <button type="submit" class="btn input-btn">Enter</button>
+        </form>
+    </main>
+    {{ background }}
+    <script>
+        let name = '{{ name }}';
+        let message = '{{ message }}';
+    </script>
+    <script src="files/js/join.js" defer></script>
+</body>
+</html>

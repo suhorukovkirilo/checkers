@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="files/css/index.css" rel="stylesheet">
+    <link href="files/css/game.css" rel="stylesheet">
+    <title>Checkers</title>
+</head>
+<body>
+    {{ header }}
+    <main>
+        <h2>Loading...</h2>
+        <div class="board">
+            <div class="row a">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row b">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row c">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row d">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row e">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row f">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row g">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="row h">
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+            <div class="checkers">
+            </div>
+        </div>
+        <div class="player-info" style="width: 100px">
+            <span>You (<span></span>)</span>
+            <div class="checker"></div>
+            <div class="arrow" style="display: none;">
+                <div class="triangle"></div>
+                <div class="rectangle"></div>
+            </div>
+        </div>
+        <div class="opponent-info" style="width: 100px">
+            <span></span>
+            <div class="checker"></div>
+            <div class="arrow" style="display: none;">
+                <div class="triangle"></div>
+                <div class="rectangle"></div>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="screen"></div>
+            <div class="fill"></div>
+            <h2></h2>
+            <p>Бажаєте зіграти ще?</p>
+            <div class="btns">
+                <button class="btn agree">Так</button>
+                <button class="btn disagree">Ні</button>
+            </div>
+        </div>    
+    </main>
+    {{ background }}
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const TOKEN = '{{ TOKEN }}';
+        const playerName = '{{ name }}';
+        const opponentName = '{{ opponent }}'
+        const startBoard = JSON.parse('{{ board }}');
+        const playerColor = '{{ color }}';
+        const gameEnded = '{{ gameEnded }}';
+        let victory = '{{ victory }}';
+        let canMove = '{{ move }}';
+    </script>
+    <script src="files/js/game.js" defer></script>
+</body>
+</html>

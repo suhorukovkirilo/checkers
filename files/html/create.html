@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="files/css/index.css" rel="stylesheet">
+    <title>Checkers</title>
+</head>
+<body>
+    {{ header }}
+    <main>
+        <form method="post">
+            <h2>Choose your nickname for a game</h2>
+            <p id="message" style="color: var(--darkred); margin: 0px; text-align: center;"></p>
+            <input name="name" id="name" placeholder="Nickname" autocomplete="off">
+            <input name="Account_TOKEN" id="Account_TOKEN" value="" style="visibility: hidden; height: 0; border: none; padding: 0;">
+            <button type="submit" class="btn input-btn">Create a game</button>
+        </form>
+    </main>
+    {{ background }}
+    <script>
+        let name = '{{ name }}';
+        let message = '{{ message }}';
+    </script>
+    <script src="files/js/create.js" defer></script>
+</body>
+</html>

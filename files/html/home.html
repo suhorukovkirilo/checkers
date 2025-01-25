@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="files/css/index.css" rel="stylesheet">
+    <link href="files/css/game.css" rel="stylesheet">
+    <link href="files/css/home.css" rel="stylesheet">
+    <title>Checkers</title>
+</head>
+<body>
+    {{ header }}
+    <main>
+        <h1>Checkers Game</h1>
+        <div class="main-div">
+            <div class="board">
+                <div class="row a">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="row b">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="row c">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="row d">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="row e">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="row f">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="row g">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="row h">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="checkers">
+                </div>
+            </div>
+        </div>
+        <div class="btn-set">
+            <script id="tg-btn" async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="checkersloginbot" data-size="large" data-radius="20" data-onauth="onTelegramAuth(user)"></script>  
+            <script> 
+                if (localStorage.getItem("auth") == "true") {
+                    document.getElementById('tg-btn').remove();
+                    const button = document.createElement('button');
+                    button.classList.add('btn');
+                    button.style.fontSize = '18px';
+                    button.innerHTML = 'My account';
+                    button.onclick = () => {
+                        location.href = '/profile';
+                    };
+                    document.querySelector('.btn-set').appendChild(button);
+                };
+            </script>
+        </div>
+    </main>
+    {{ background }}
+    <script src="files/js/home.js" defer></script>
+</body>
